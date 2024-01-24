@@ -32,7 +32,8 @@ public class App
 			System.out.println("2.SELECT BY TITLE");
 			System.out.println("3.SELECT ALL");
 			System.out.println("4.UPDATE");
-			System.out.println("5.EXIT");
+			System.out.println("5.DELETE");
+			System.out.println("6.EXIT");
 		
 			int choice = sc.nextInt();
 			
@@ -78,8 +79,21 @@ public class App
 					else
 						System.err.println("Record update failed");
 					break;
+					
+				case 5:System.out.println("Enter title");
+				try {
+					String input = sc.next();
+					if(service.deleteCertification(input))
+						System.out.println("Record deleted");
+					else
+						System.err.println("Record delete failed");
 				
-				case 5:flag=false;
+				}catch(NullPointerException e) {
+					e.printStackTrace();
+				}
+			break;
+				
+				case 6:flag=false;
 				break;
 				
 				default:break;

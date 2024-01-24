@@ -72,9 +72,22 @@ public class CertificationDaoImp implements ICertificationDao {
 		
 		Session session = sessionFactory.openSession();
 		
-		Query<Certification> query = session.createQuery("select c from Certification c");
+		Query<Certification> query = session.createNamedQuery("selectAllCertification");
 		
 		return query.getResultList();
+	}
+
+	@Override
+	public boolean deleteCertification(String title) {
+		
+		Session session = sessionFactory.openSession();
+		Transaction txn = session.beginTransaction();
+		
+		session.delete(session.get(Certification.class, title));
+		
+		txn.commit();
+		
+		return session.get(Certification.class, title)==null;
 	}
 
 	

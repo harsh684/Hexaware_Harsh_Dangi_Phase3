@@ -38,4 +38,10 @@ public class CertificationServiceImp implements ICertificationService {
 		return dao.selectAll();
 	}
 
+	@Override
+	public boolean deleteCertification(String title) {
+		// TODO Auto-generated method stub
+		return dao.deleteCertification(title);
+	}
+
 }

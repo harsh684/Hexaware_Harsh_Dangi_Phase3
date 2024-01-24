@@ -10,6 +10,8 @@ public interface ICertificationService {
 	
 	public boolean updateCertification(Certification c);
 	
+	public boolean deleteCertification(String title);
+	
 	public Certification selectOne(String title);
 	
 	public List<Certification> selectAll();

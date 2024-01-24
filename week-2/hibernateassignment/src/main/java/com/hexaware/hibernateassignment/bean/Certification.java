@@ -4,10 +4,15 @@ import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table
+@NamedQueries(
+	@NamedQuery(name="selectAllCertification",query="select c from Certification c")
+)
 public class Certification {
 
 	@Id
