@@ -1,0 +1,39 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+ 
+ 
+<hibernate-configuration>
+ 
+	<session-factory>
+	
+	
+	<!-- Database connection properties - Driver, URL, user, password -->
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/CareerCrafter</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">harsh</property>
+	
+		<property name="hbm2ddl.auto">update</property>
+		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+		<property name="show_sql">true</property>
+	
+		<!-- mapping  for one to one relationship-->
+ 		<mapping class="com.hexaware.careercrafterhibernatemappings.pojo.JobSeeker" />
+ 		<mapping class="com.hexaware.careercrafterhibernatemappings.pojo.Applications" />
+ 		<mapping class="com.hexaware.careercrafterhibernatemappings.pojo.Certification" />
+ 		<mapping class="com.hexaware.careercrafterhibernatemappings.pojo.Education" />
+ 		<mapping class="com.hexaware.careercrafterhibernatemappings.pojo.Employer" />
+ 		<mapping class="com.hexaware.careercrafterhibernatemappings.pojo.Listing" />
+ 		<mapping class="com.hexaware.careercrafterhibernatemappings.pojo.Project" />
+ 		<mapping class="com.hexaware.careercrafterhibernatemappings.pojo.Resume" />
+ 		<mapping class="com.hexaware.careercrafterhibernatemappings.pojo.WorkExperience" />
+ 		<mapping class="com.hexaware.careercrafterhibernatemappings.pojo.Skills" />
+ 		<mapping class="com.hexaware.careercrafterhibernatemappings.pojo.Languages" />
+ 		<mapping class="com.hexaware.careercrafterhibernatemappings.pojo.ReferenceLinks" />
+ 		<mapping class="com.hexaware.careercrafterhibernatemappings.pojo.Accomplishments" />
+ 		
+	</session-factory>
+ 
+ 
+</hibernate-configuration>
