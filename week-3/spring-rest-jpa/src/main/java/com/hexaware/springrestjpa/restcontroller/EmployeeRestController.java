@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.hexaware.springrestjpa.dto.EmployeeDTO;
 import com.hexaware.springrestjpa.entities.Employee;
 import com.hexaware.springrestjpa.exception.EmployeeNotFoundException;
 import com.hexaware.springrestjpa.service.EmployeeServiceImp;
@@ -32,23 +33,23 @@ public class EmployeeRestController {
 
 	
 	@PostMapping("/add")
-	public Employee insertEmployee(@RequestBody Employee e) {
+	public Employee insertEmployee(@RequestBody EmployeeDTO e) {
 		
 		boolean isValid = EmployeeServiceImp.validateData(e);
 		
-		Employee emp = null;
-		
+		EmployeeDTO emp = null;
+		Employee e1 = null;
 		if(isValid) {
-			emp = service.addEmployee(emp);
+			e1 = service.addEmployee(emp);
 			
 		}
 		
 		
-		return emp;
+		return e1;
 	}
 	
 	@PutMapping("/update")
-	public Employee updateEmployee(@RequestBody @Valid Employee e) {
+	public Employee updateEmployee(@RequestBody @Valid EmployeeDTO e) {
 		return service.updateEmployee(e);
 	}
 	

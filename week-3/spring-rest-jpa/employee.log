@@ -59,3 +59,9 @@
 2024-02-01T16:48:14.376+05:30  INFO 26196 --- [http-nio-8080-exec-1] c.h.s.service.EmployeeServiceImp         : inside service getbyid executing
 2024-02-01T16:48:14.461+05:30  WARN 26196 --- [http-nio-8080-exec-1] c.h.s.r.EmployeeRestController           : EmployeeRestController executing
 2024-02-01T16:48:14.462+05:30  INFO 26196 --- [http-nio-8080-exec-1] c.h.s.r.EmployeeRestController           : EmployeeRestController executing
+2024-02-01T18:25:16.124+05:30  INFO 26196 --- [RMI TCP Connection(106)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-02-01T18:25:16.216+05:30  INFO 26196 --- [RMI TCP Connection(106)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-02-01T18:25:16.222+05:30  INFO 26196 --- [RMI TCP Connection(106)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-02-01T18:25:16.258+05:30  INFO 26196 --- [RMI TCP Connection(106)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-01T18:25:16.276+05:30  INFO 26196 --- [RMI TCP Connection(106)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-01T18:25:16.282+05:30  INFO 26196 --- [RMI TCP Connection(106)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

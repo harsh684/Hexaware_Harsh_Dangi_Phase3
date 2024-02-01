@@ -10,6 +10,7 @@ import org.springframework.data.domain.Sort.Order;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 
+import com.hexaware.springrestjpa.dto.EmployeeDTO;
 import com.hexaware.springrestjpa.entities.Employee;
 import com.hexaware.springrestjpa.repository.EmployeeRepository;
 
@@ -25,16 +26,17 @@ public class EmployeeServiceImp implements IEmployeeService {
 	EmployeeRepository repo;
 	
 	@Override
-	public Employee addEmployee(Employee e) {
+	public Employee addEmployee(EmployeeDTO e) {
 		
 		logger.info(e+" is added from addEmployee()");
-		return repo.save(e);
+		Employee emp = new Employee(e.getEid(),e.getEname(),e.getSalary());
+		return repo.save(emp);
 	}
 
 	@Override
-	public Employee updateEmployee(Employee e) {
-		
-		return repo.save(e);
+	public Employee updateEmployee(EmployeeDTO e) {
+		Employee emp = new Employee(e.getEid(),e.getEname(),e.getSalary());
+		return repo.save(emp);
 	}
 
 	@Override
@@ -93,7 +95,7 @@ public class EmployeeServiceImp implements IEmployeeService {
 	
 	
 	//input validation
-	public static boolean validateData(Employee e) {
+	public static boolean validateData(EmployeeDTO e) {
 		boolean flag = false;
 		if(e.getEid()>99 && e.getSalary()>1000 && e.getEname().equals(e.getEname().toUpperCase())) {
 			flag=true;
