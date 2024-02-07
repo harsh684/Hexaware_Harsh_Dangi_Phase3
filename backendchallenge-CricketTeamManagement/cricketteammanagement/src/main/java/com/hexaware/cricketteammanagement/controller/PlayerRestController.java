@@ -49,7 +49,7 @@ public class PlayerRestController {
 			throw new InvalidRoleException("Invalid role entered");
 		}
 			
-		return playerService.getByRole(role);
+		return result;
 	}
 	
 	@PostMapping("/create")
