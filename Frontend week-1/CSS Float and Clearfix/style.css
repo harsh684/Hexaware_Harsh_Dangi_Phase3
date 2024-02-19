@@ -1,0 +1,26 @@
+div {
+    padding: 15px; 
+  }
+  
+  .div1 {
+    float: left;
+    background: red;
+  }
+  
+  .div2 {
+    float: right;
+    background: yellow;
+  }
+  
+  .div3 {
+    background: green;
+  }
+
+  .img2 {
+    float: right;
+  }
+  
+  .clearfix {
+    overflow: auto;
+    border: 2px solid black;
+  }
