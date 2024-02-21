@@ -1,0 +1,22 @@
+<h2>Languages List</h2>
+<div class="container col-md-4">
+<form  (submit)="addLanguages()">
+
+<input type="text" placeholder="Add New Todo" class="form-control" name="newLanguageTitle"  [(ngModel)]="newLanguageTitle"> 
+<button type="submit" class="btn btn-success">Add</button>
+
+
+</form>
+
+<ul>
+    <li *ngFor="let lang of languagesList">
+        <!-- <input type="checkbox"  [checked]="lang.completed" (change)='toggleTodo(todo.id)'> -->
+        <span>{{lang.languageName}}</span>
+        <button type="button" (click)="removeTodo(lang.languageId)" class="btn btn-danger">Remove</button>
+    
+    </li>
+
+
+</ul>
+
+</div>
