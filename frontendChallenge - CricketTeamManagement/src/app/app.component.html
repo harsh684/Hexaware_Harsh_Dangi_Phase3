@@ -1,0 +1,41 @@
+<div class="parent-container container-fluid d-flex flex-column justify-content-center">
+  <h1 class="heading">Cricket Management System</h1>
+  <div class="searchbox">
+    <input class="form-control searchinput shadow" placeholder="Enter Player Role" type="text" [(ngModel)]="searchedRole">
+    <button class="btn btn-primary" (click)="getByRole()">Search</button>
+  </div>
+  <div>
+    <div class="container">
+      <table class="shadow table table-striped table-container">
+        <thead>
+          <tr>
+            <th>S.NO.</th>
+            <th>Player ID</th>
+            <th>Player Name</th>
+            <th>Jersey Number</th>
+            <th>Role</th>
+            <th>Total Matches</th>
+            <th>Team Name</th>
+            <th>Country Name</th>
+            <th>Description</th>
+            <th>Delete Player</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let player of playerList; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{ player.playerId }}</td>
+            <td>{{ player.playerName }}</td>
+            <td>{{ player.jerseyNumber }}</td>
+            <td>{{ player.role }}</td>
+            <td>{{ player.totalMatches }}</td>
+            <td>{{ player.teamName }}</td>
+            <td>{{ player.countryName }}</td>
+            <td>{{ player.description }}</td>
+            <td><button class="btn btn-danger" (click)="deletePlayer(player.playerId)">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </div>

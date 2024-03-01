@@ -1,0 +1,28 @@
+.parent-container{
+    padding-top: 0;
+    height: 100vh;
+    background-color: rgb(247, 239, 255);
+}
+.heading{
+    text-align: center;
+}
+.searchbox{
+    display: flex;
+    justify-content: end;
+    padding: 10px 10px;
+    margin: 30px 0 30px 0;
+    width: 93%;
+}
+.searchinput{
+    width: fit-content;
+    margin: 0 8px 0 0;
+}
+.table-container{
+    text-align: center;
+}
+label{
+    font-weight: 500;
+}
+.form-container{
+    width: 30%;
+}
